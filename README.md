@@ -13,7 +13,7 @@ The `define` command only uses ChatGPT v3.5 and will cost you around $1 USD a mo
 ## define IS NOT
 
 - A general purpose OpenAI client
-- A free tool to use, you will need an OpenAI API
+- A free tool to use, you will need an OpenAI API Key
 - Always perfect in its response
 
 ## Installation
