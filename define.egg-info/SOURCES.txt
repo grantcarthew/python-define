@@ -1,0 +1,10 @@
+LICENSE
+README.md
+define.py
+setup.py
+define.egg-info/PKG-INFO
+define.egg-info/SOURCES.txt
+define.egg-info/dependency_links.txt
+define.egg-info/entry_points.txt
+define.egg-info/requires.txt
+define.egg-info/top_level.txt
