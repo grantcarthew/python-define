@@ -64,6 +64,7 @@ Antonyms:
 10. Restricted-access software
 
 $ define "A variable that holds key/value data"
+
 Spelling: Dictionary
 Definition: A variable that holds key/value pairs of data.
 
@@ -141,7 +142,7 @@ Antonyms:
 
 $ define horseduvers
 
-Spelling: Hors d'oeuvres
+Spelling: Hors d\'oeuvres
 Definition: Small savory dishes served as an appetizer before a meal.
 
 Synonyms:
