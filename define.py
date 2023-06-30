@@ -7,13 +7,6 @@ import os
 import sys
 
 
-def assert_openai_api_key():
-    # Check if the OpenAI API key is set
-    if not openai.api_key:
-        click.echo('Please set the OPENAI_API_KEY environment variable')
-        sys.exit(1)
-
-
 def call_gpt_async(model: str, messages: List[Dict[str, str]], parameters: Dict[str, float]) -> Dict[str, str]:
     """Call the GPT model asynchronously and return the response."""
 
@@ -185,12 +178,14 @@ Antonyms:
 
 @click.command()
 @click.argument('query')
-def cli(query: str):
+def cli(query: str) -> None:
     """CLI function that uses OpenAI's GPT model to respond to a query."""
 
     # Fetch the OpenAI API key from the environment variables
     openai.api_key = os.getenv('OPENAI_API_KEY')
-    assert_openai_api_key()
+    if not openai.api_key:
+        click.echo('Please set the OPENAI_API_KEY environment variable')
+        sys.exit(1)
 
     model = 'gpt-3.5-turbo'
     parameters = {
@@ -202,6 +197,7 @@ def cli(query: str):
 
     # Call the GPT model with the query and parameters
     call_gpt_async(model, messages, parameters)
+    click.echo()
 
 
 if __name__ == '__main__':
