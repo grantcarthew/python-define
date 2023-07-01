@@ -1,14 +1,14 @@
 # define
 
-An OpenAI powered command-line linguistics assistant.
+An OpenAI-powered command-line linguistics assistant.
 
-If you're like me, you are often unsure about the spelling of words and sometimes the definition of a word. Or you are a programmer trying to come up with a name for that variable, function, data, whatever.
+If you're like me, you often feel unsure about the spelling of words, and sometimes even the definition of a word. Perhaps you're a programmer trying to come up with a name for that variable, function, data, or whatever else.
 
-The `define` command is a godsend. One of the best things to come out of Large Language Models.
+The 'define' command is a godsend. It's one of the best things to come out of Large Language Models.
 
-It uses the OpenAI API to query for definitions of words. It fixes spelling mistakes and supplies synonyms and antonyms.
+It uses the OpenAI API to query definitions of words, correct spelling mistakes, and provide synonyms as well as antonyms.
 
-The `define` command only uses ChatGPT v3.5 and will cost you around $1 USD a month for typical use.
+The 'define' command solely utilizes ChatGPT v3.5 and will cost you around $1 USD per month for typical use.
 
 ## define IS NOT
 
