@@ -179,7 +179,7 @@ Antonyms:
 @click.command()
 @click.argument('query')
 def cli(query: str) -> None:
-    """CLI function that uses OpenAI's GPT model to respond to a query."""
+    """An OpenAI-powered command-line linguistics assistant."""
 
     # Fetch the OpenAI API key from the environment variables
     openai.api_key = os.getenv('OPENAI_API_KEY')
