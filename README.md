@@ -28,13 +28,13 @@ python -m pip install --editable .
 
 ## Examples
 
-```shell
-$ define oss
+```markdown
+> $ define oss
 
 Spelling: Oss
 Correction: It seems that there is a spelling mistake. Could you please provide more context or clarify the word you are referring to?
 
-$ define "oss as in software"
+> $ define "oss as in software"
 
 Spelling: OSS (Open Source Software)
 Definition: Software that is freely available and can be modified and distributed by anyone.
@@ -63,7 +63,7 @@ Antonyms:
 9. Confidential software
 10. Restricted-access software
 
-$ define "A variable that holds key/value data"
+> $ define "A variable that holds key/value data"
 
 Spelling: Dictionary
 Definition: A variable that holds key/value pairs of data.
@@ -82,7 +82,7 @@ Synonyms:
 
 Antonyms: N/A
 
-$ define orsom
+> $ define orsom
 
 Spelling: Awesome
 Definition: Extremely impressive or daunting; inspiring awe.
@@ -111,7 +111,7 @@ Antonyms:
 9. Average
 10. Subpar
 
-$ define "god send"
+> $ define "god send"
 
 Spelling: Godsend
 Definition: Something or someone that is unexpectedly helpful or beneficial.
@@ -140,7 +140,7 @@ Antonyms:
 9. Difficulty
 10. Burden
 
-$ define horseduvers
+> $ define horseduvers
 
 Spelling: Hors d\'oeuvres
 Definition: Small savory dishes served as an appetizer before a meal.
@@ -159,7 +159,7 @@ Synonyms:
 
 Antonyms: N/A (Hors d'oeuvres are a specific type of food and do not have direct antonyms)
 
-$ define cricky
+> $ define cricky
 
 Spelling: Cricket
 Definition: A game played with a ball and bat by two teams of eleven players on a large field.
@@ -178,7 +178,7 @@ Synonyms:
 
 Antonyms: N/A
 
-$ define "cricky as in aussie slang"
+> $ define "cricky as in aussie slang"
 
 Spelling: Crikey
 Definition: An exclamation used to express surprise or astonishment, often associated with Australian slang.
@@ -196,5 +196,17 @@ Synonyms:
 10. Well, I'll be
 
 Antonyms: N/A
+
+> $ define "I don't know what it's called, but when you are scared of crouds?"
+
+Spelling: Crowds
+Definition: A large number of people gathered closely together in a confined space.
+
+The fear of crowds is called:
+
+Phobia: Agoraphobia
+
+Agoraphobia is an anxiety disorder characterized by a fear of being in situations where escape might be difficult or help might not be available, often resulting in avoidance of crowded places or public spaces.
+
 
 ```
