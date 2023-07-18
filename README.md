@@ -24,7 +24,7 @@ export OPENAI_API_KEY="<your-openai-api-key>"
 python -m pip install python-define
 ```
 
-Package Address: https://pypi.org/project/python-define/0.1.0/
+Package Address: https://pypi.org/project/python-define/
 
 ## Examples
 
