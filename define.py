@@ -2,6 +2,7 @@
 
 from typing import List, Dict
 import click
+import locale
 import openai
 import os
 import sys
@@ -47,11 +48,8 @@ def call_gpt_async(model: str, messages: List[Dict[str, str]], parameters: Dict[
 
 def get_messages(user_content: str) -> List[Dict[str, str]]:
     """Prepare the list of messages for the GPT model."""
-
-    # This is a predefined set of messages with a final user message being the actual query
-    return [{
-        'role': 'user',
-        'content': """
+    locale_info = '_'.join(locale.getlocale())
+    initial_prompt = """
 # English Linguistics Expert
 
 You are an **expert** in the **English Language**.
@@ -82,6 +80,8 @@ Use the **phonetic sound** of the letters to try and determine what word I am tr
 ## Constraints
 
 - Your answers will be for the **English Language**.
+- The users locale value is: **{{locale}}**.
+- Ensure you answer with the users **locale** values in mind.
 - If it looks like I am commenting to you or complementing you, I am not, I am asking for an answer.
 
 ## Answer Format
@@ -93,11 +93,16 @@ Synonyms: <list-ten-synonyms-as-numbered-bullet-points>
 
 Antonyms: <list-ten-antonyms-as-numbered-bullet-points>
 
-        """
+"""
+
+    # This is a predefined set of messages with a final user message being the actual query
+    return [{
+        'role': 'user',
+        'content': initial_prompt.replace('{{locale}}', locale_info)
     },
         {
         'role': 'assistant',
-        'content': 'Understood. Let\'s proceed with your queries.'
+        'content': f'Understood. Let\'s proceed with your queries. I will answer relative to your {locale_info} settings.'
     },
         {
         'role': 'user',
