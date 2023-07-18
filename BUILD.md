@@ -3,6 +3,7 @@
 Update the version in the `pyproject.toml` file.
 
 ```bash
+rm -rf ./dist
 python -m build
 python -m twine upload --repository pypi dist/*
 ```
