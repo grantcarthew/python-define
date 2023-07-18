@@ -19,6 +19,8 @@ The 'define' command solely utilizes ChatGPT v3.5 and will cost you around $1 US
 ## Installation
 
 ```shell
+export OPENAI_API_KEY="<your-openai-api-key>"
+# echo 'export OPENAI_API_KEY="<your-openai-api-key>"' >> "${HOME}/.bashrc"
 python -m pip install python-define
 ```
 
