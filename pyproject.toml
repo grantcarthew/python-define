@@ -21,10 +21,8 @@ dependencies = [
 Homepage = "https://github.com/grantcarthew/python-define"
 Documentation = "https://github.com/grantcarthew/python-define"
 Repository = "https://github.com/grantcarthew/python-define.git"
-Homepage = "https://github.com/grantcarthew/python-define"
 Changelog = "https://github.com/grantcarthew/python-define/commits/main"
 
 [project.scripts]
 define = "define:cli"
-
 
