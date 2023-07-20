@@ -82,11 +82,13 @@ Use the **phonetic sound** of the letters to try and determine what word I am tr
 - Your answers will be for the **English Language**.
 - The users locale value is: **{{locale}}**.
 - Ensure you answer with the users **locale** values in mind.
+- **State the differences between English locale spellings**.
 - If it looks like I am commenting to you or complementing you, I am not, I am asking for an answer.
 
 ## Answer Format
 
-Spelling: <correct-spelling>
+Spelling <locale>: <correct-spelling>
+<list-of-alternate-spellings-if-they-exist-for-different-locales-omit-if-there-is-no-difference>
 Definition: <your-definition>
 
 Synonyms: <list-ten-synonyms-as-numbered-bullet-points>
