@@ -12,7 +12,6 @@ import sys
 def call_gpt_async(model: str, messages: List[Dict[str, str]], parameters: Dict[str, float]) -> Dict[str, str]:
     """Call the GPT model asynchronously and return the response."""
 
-    # Start the async call to the GPT model
     response = openai.ChatCompletion.create(
         model=model,
         messages=messages,
@@ -22,34 +21,25 @@ def call_gpt_async(model: str, messages: List[Dict[str, str]], parameters: Dict[
         stream=True
     )
 
-    collected_chunks = []
-    collected_content = []
-
     try:
-        # Collect chunks of response from the model
         for chunk in response:
-            collected_chunks.append(chunk)
             if 'content' in chunk['choices'][0]['delta']:
                 chunk_content = chunk['choices'][0]['delta']['content']
                 click.secho(chunk_content, fg='cyan', nl=False)
-                collected_content.append(chunk_content)
         print()
     except KeyboardInterrupt:
         print()
     except Exception as err:
-        # Handle exception and print the error message
         click.echo(f'[red]Error:[/] {err}')
-
-    # Compile the full reply from the chunks
-    full_reply_content = ''.join(collected_content)
-    finish_reason = collected_chunks[-1]['choices'][0]['finish_reason']
-
-    return {'content': full_reply_content, 'finish_reason': finish_reason}
 
 
 def get_messages(user_content: str) -> List[Dict[str, str]]:
     """Prepare the list of messages for the GPT model."""
+
     locale_info = '_'.join(locale.getlocale())
+
+    # The initial prompt is being defined as a separate string to be able to
+    # replace {{locale}} with the users locale
     initial_prompt = """
 # English Linguistics Expert
 
@@ -190,7 +180,6 @@ Antonyms:
 def cli(query: str) -> None:
     """An OpenAI-powered command-line linguistics assistant."""
 
-    # Fetch the OpenAI API key from the environment variables
     openai.api_key = os.getenv('OPENAI_API_KEY')
     if not openai.api_key:
         click.echo('Please set the OPENAI_API_KEY environment variable')
@@ -204,7 +193,6 @@ def cli(query: str) -> None:
     }
     messages = get_messages(query)
 
-    # Call the GPT model with the query and parameters
     call_gpt_async(model, messages, parameters)
     click.echo()
 
