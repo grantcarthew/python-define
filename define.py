@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+from importlib.metadata import version
 from typing import List, Dict
 import click
 import locale
@@ -184,6 +185,7 @@ Antonyms:
 
 
 @click.command()
+@click.version_option(version('python-define'))
 @click.argument('query')
 def cli(query: str) -> None:
     """An OpenAI-powered command-line linguistics assistant."""
