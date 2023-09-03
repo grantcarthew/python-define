@@ -81,6 +81,7 @@ Use the **phonetic sound** of the letters to try and determine what word I am tr
 Spelling <locale>: <correct-spelling>
 <list-of-alternate-spellings-if-they-exist-for-different-locales-omit-if-there-is-no-difference>
 Definition: <your-definition>
+Category: <type-of-word> - <short-description-of-category>
 
 Synonyms: <list-ten-synonyms-as-numbered-bullet-points>
 
@@ -106,6 +107,7 @@ Antonyms: <list-ten-antonyms-as-numbered-bullet-points>
         'content': """
 Spelling: Excellent
 Definition: Very good; of the highest quality.
+Category: Adjective - a word that describes or modifies a noun or pronoun.
 
 Synonyms:
 1. Outstanding
@@ -141,6 +143,7 @@ Antonyms:
         'content': """
 Spelling: There
 Definition: In, at, or to that place or position.
+Category: Adverb - a word that modifies or describes a verb, adjective, or other adverb.
 
 Synonyms:
 1. Over there
