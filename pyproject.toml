@@ -13,8 +13,8 @@ maintainers = [
 ]
 keywords = ["define", "openai", "llm", "english", "linguistics", "cli"]
 dependencies = [
-  "Click=8.1.7",
-  "openai=1.25.0",
+  "Click~=8.1.7",
+  "openai~=1.25.0",
 ]
 
 [project.urls]
