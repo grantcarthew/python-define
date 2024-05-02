@@ -1,36 +1,33 @@
 #!/usr/bin/env python
 
 from importlib.metadata import version
+from openai import OpenAI
 from typing import List, Dict
 import click
 import locale
-import openai
 import os
 import sys
 
+client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
 
 def call_gpt_async(model: str, messages: List[Dict[str, str]], parameters: Dict[str, float]) -> Dict[str, str]:
     """Call the GPT model asynchronously and return the response."""
 
-    response = openai.ChatCompletion.create(
-        model=model,
-        messages=messages,
-        temperature=parameters['temperature'],
-        frequency_penalty=parameters['frequency_penalty'],
-        presence_penalty=parameters['presence_penalty'],
-        stream=True
-    )
+    stream = client.chat.completions.create(model=model,
+    messages=messages,
+    temperature=parameters['temperature'],
+    frequency_penalty=parameters['frequency_penalty'],
+    presence_penalty=parameters['presence_penalty'],
+    stream=True)
 
     try:
-        for chunk in response:
-            if 'content' in chunk['choices'][0]['delta']:
-                chunk_content = chunk['choices'][0]['delta']['content']
-                click.secho(chunk_content, fg='cyan', nl=False)
+        for chunk in stream:
+            click.secho(chunk.choices[0].delta.content or "", fg='cyan', nl=False)
         print()
     except KeyboardInterrupt:
         print()
     except Exception as err:
-        click.echo(f'[red]Error:[/] {err}')
+        click.echo(click.style(f'Error: {err}', fg='red'), err=True)
 
 
 def get_messages(user_content: str) -> List[Dict[str, str]]:
@@ -183,8 +180,7 @@ Antonyms:
 def cli(query: str) -> None:
     """An OpenAI-powered command-line linguistics assistant."""
 
-    openai.api_key = os.getenv('OPENAI_API_KEY')
-    if not openai.api_key:
+    if not client.api_key:
         click.echo('Please set the OPENAI_API_KEY environment variable')
         sys.exit(1)
 
