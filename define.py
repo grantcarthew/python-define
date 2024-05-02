@@ -8,17 +8,21 @@ import locale
 import os
 import sys
 
-client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
 
 def call_gpt_async(model: str, messages: List[Dict[str, str]], parameters: Dict[str, float]) -> Dict[str, str]:
     """Call the GPT model asynchronously and return the response."""
 
-    stream = client.chat.completions.create(model=model,
-    messages=messages,
-    temperature=parameters['temperature'],
-    frequency_penalty=parameters['frequency_penalty'],
-    presence_penalty=parameters['presence_penalty'],
-    stream=True)
+    try:
+        client = OpenAI()
+        stream = client.chat.completions.create(model=model,
+            messages=messages,
+            temperature=parameters['temperature'],
+            frequency_penalty=parameters['frequency_penalty'],
+            presence_penalty=parameters['presence_penalty'],
+            stream=True)
+    except Exception as err:
+        click.echo(click.style(f'Error: {err}', fg='yellow'), err=True)
+        sys.exit(1)
 
     try:
         for chunk in stream:
@@ -179,10 +183,6 @@ Antonyms:
 @click.argument('query')
 def cli(query: str) -> None:
     """An OpenAI-powered command-line linguistics assistant."""
-
-    if not client.api_key:
-        click.echo('Please set the OPENAI_API_KEY environment variable')
-        sys.exit(1)
 
     model = 'gpt-3.5-turbo'
     parameters = {
