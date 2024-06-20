@@ -8,7 +8,7 @@ The 'define' command is a godsend. It's one of the best things to come out of La
 
 It uses the OpenAI API to query definitions of words, correct spelling mistakes, and provide synonyms as well as antonyms.
 
-The 'define' command solely utilizes ChatGPT v3.5 and will cost you around $1 USD per month for typical use.
+The 'define' command solely utilizes ChatGPT v4o and will cost you around $2 USD per month for typical use.
 
 ## define IS NOT
 
