@@ -184,7 +184,7 @@ Antonyms:
 def cli(query: str) -> None:
     """An OpenAI-powered command-line linguistics assistant."""
 
-    model = 'gpt-3.5-turbo'
+    model = 'gpt-4o'
     parameters = {
         'temperature': 0,
         'frequency_penalty': 0,
