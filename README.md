@@ -31,183 +31,224 @@ Package Address: https://pypi.org/project/python-define/
 ## Examples
 
 ```markdown
-> $ define oss
+> $ define acomodate
 
-Spelling: Oss
-Correction: It seems that there is a spelling mistake. Could you please provide more context or clarify the word you are referring to?
-
-> $ define "oss as in software"
-
-Spelling: OSS (Open Source Software)
-Definition: Software that is freely available and can be modified and distributed by anyone.
+Spelling: Accommodate
+Definition: To provide lodging or sufficient space for; to fit in with the wishes or needs of.
+Category: Verb - a word that describes an action, state, or occurrence.
 
 Synonyms:
-1. Open source
-2. Free software
-3. Libre software
-4. FOSS (Free and Open Source Software)
-5. FLOSS (Free/Libre and Open Source Software)
-6. Community-driven software
-7. Collaborative software
-8. Transparent software
-9. Unrestricted software
-10. Public software
+1. House
+2. Lodge
+3. Shelter
+4. Fit
+5. Hold
+6. Contain
+7. Adapt
+8. Adjust
+9. Conform
+10. Serve
 
 Antonyms:
-1. Proprietary software
-2. Closed source software
-3. Commercial software
-4. Restricted software
-5. Private software
-6. Non-open source software
-7. Paid software
-8. Exclusive software
-9. Confidential software
-10. Restricted-access software
+1. Displace
+2. Evict
+3. Reject
+4. Refuse
+5. Turn away
+6. Inconvenience
+7. Disorganize
+8. Misfit
+9. Disturb
+10. Upset
 
-> $ define "A variable that holds key/value data"
+
+> $ define A variable that holds key/value data
 
 Spelling: Dictionary
-Definition: A variable that holds key/value pairs of data.
+Definition: A data structure that holds key/value pairs, allowing for efficient retrieval of values based on their associated keys.
+Category: Noun - a word that represents a person, place, thing, or idea.
 
 Synonyms:
-1. Map
-2. Hash
-3. Associative array
-4. Keyed array
-5. Lookup table
-6. Symbol table
-7. Hash table
+1. Hashmap
+2. Hashtable
+3. Map
+4. Associative array
+5. Key-value store
+6. Lookup table
+7. Symbol table
 8. Index
-9. Directory
-10. Container
+9. Registry
+10. Catalog
 
-Antonyms: N/A
+Antonyms:
+1. List
+2. Array
+3. Sequence
+4. Stack
+5. Queue
+6. Set
+7. Collection
+8. Series
+9. Chain
+10. Line
+
 
 > $ define orsom
 
 Spelling: Awesome
-Definition: Extremely impressive or daunting; inspiring awe.
+Definition: Extremely impressive or daunting; inspiring great admiration, apprehension, or fear.
+Category: Adjective - a word that describes or modifies a noun or pronoun.
 
 Synonyms:
 1. Amazing
-2. Incredible
-3. Fantastic
-4. Wonderful
-5. Spectacular
-6. Breathtaking
-7. Remarkable
-8. Astonishing
-9. Extraordinary
-10. Magnificent
+2. Astonishing
+3. Astounding
+4. Breathtaking
+5. Impressive
+6. Magnificent
+7. Marvelous
+8. Stunning
+9. Wonderful
+10. Spectacular
 
 Antonyms:
-1. Terrible
-2. Awful
+1. Unimpressive
+2. Ordinary
 3. Mediocre
-4. Unimpressive
-5. Ordinary
-6. Dull
-7. Boring
-8. Mundane
-9. Average
-10. Subpar
+4. Common
+5. Dull
+6. Boring
+7. Unremarkable
+8. Uninspiring
+9. Mundane
+10. Plain
 
-> $ define "god send"
+
+> $ define god send
 
 Spelling: Godsend
-Definition: Something or someone that is unexpectedly helpful or beneficial.
+Definition: A very helpful or valuable event, person, or thing.
+Category: Noun - a word that functions as the name of a specific object or set of objects.
 
 Synonyms:
 1. Blessing
 2. Boon
-3. Gift
-4. Windfall
-5. Stroke of luck
-6. Miracle
-7. Lifesaver
-8. Relief
-9. Advantage
-10. Bonanza
+3. Windfall
+4. Benefit
+5. Advantage
+6. Gift
+7. Aid
+8. Help
+9. Miracle
+10. Treasure
 
 Antonyms:
 1. Curse
 2. Misfortune
-3. Calamity
-4. Disaster
-5. Setback
-6. Problem
-7. Hindrance
+3. Disaster
+4. Calamity
+5. Hindrance
+6. Burden
+7. Drawback
 8. Obstacle
-9. Difficulty
-10. Burden
+9. Problem
+10. Nuisance
+
 
 > $ define horseduvers
 
-Spelling: Hors d\'oeuvres
-Definition: Small savory dishes served as an appetizer before a meal.
+Spelling: Hors d'oeuvres
+Definition: Small dishes served before a meal or at a party.
+Category: Noun - a word that functions as the name of a specific object or set of objects.
 
 Synonyms:
 1. Appetizers
 2. Starters
 3. Canapés
-4. Finger foods
+4. Nibbles
 5. Snacks
-6. Tapas
-7. Antipasti
-8. Mezze
+6. Finger food
+7. Tapas
+8. Antipasti
 9. Amuse-bouches
-10. Nibbles
+10. Tidbits
 
-Antonyms: N/A (Hors d'oeuvres are a specific type of food and do not have direct antonyms)
+Antonyms:
+1. Main courses
+2. Entrées
+3. Main dishes
+4. Principal dishes
+5. Main meals
+6. Main servings
+7. Main plates
+8. Main courses
+9. Main fare
+10. Main entrees
+
 
 > $ define cricky
 
-Spelling: Cricket
-Definition: A game played with a ball and bat by two teams of eleven players on a large field.
-
-Synonyms:
-1. Bat-and-ball game
-2. Gentleman's game
-3. Test match
-4. T20
-5. ODI
-6. Wicket
-7. Innings
-8. Bowler
-9. Batsman
-10. Fielder
-
-Antonyms: N/A
-
-> $ define "cricky as in aussie slang"
-
 Spelling: Crikey
-Definition: An exclamation used to express surprise or astonishment, often associated with Australian slang.
+Definition: An exclamation of surprise or astonishment.
+Category: Interjection - a word or phrase that expresses a sudden emotion or reaction.
 
 Synonyms:
-1. Wow
-2. Gee
-3. Gosh
-4. Golly
-5. Blimey
-6. Jeez
-7. Holy cow
-8. Goodness gracious
-9. My word
-10. Well, I'll be
+1. Blimey
+2. Gosh
+3. Wow
+4. Jeez
+5. Goodness
+6. Holy cow
+7. My word
+8. Oh my
+9. Heavens
+10. Yikes
 
-Antonyms: N/A
+Antonyms: (Note: Interjections typically do not have direct antonyms, but here are some expressions of calm or indifference)
+1. Meh
+2. Whatever
+3. No big deal
+4. So what
+5. Who cares
+6. Fine
+7. Okay
+8. Alright
+9. Sure
+10. Alright then
 
-> $ define "I don't know what it's called, but when you are scared of crouds?"
+
+> $ define I don't know what it's called, but when you are scared of crouds?
 
 Spelling: Crowds
-Definition: A large number of people gathered closely together in a confined space.
+Definition: Large groups of people gathered together.
+Category: Noun - a word that represents a person, place, thing, or idea.
 
-The fear of crowds is called:
+Spelling: Agoraphobia
+Definition: An anxiety disorder characterized by an intense fear of places or situations where escape might be difficult or help unavailable, often leading to avoidance of crowds or open spaces.
+Category: Noun - a word that represents a person, place, thing, or idea.
 
-Phobia: Agoraphobia
+Synonyms:
+1. Fear of open spaces
+2. Social anxiety
+3. Panic disorder
+4. Claustrophobia (related but different)
+5. Anxiety disorder
+6. Fear of public places
+7. Fear of leaving home
+8. Fear of being trapped
+9. Fear of being helpless
+10. Fear of being embarrassed
 
-Agoraphobia is an anxiety disorder characterized by a fear of being in situations where escape might be difficult or help might not be available, often resulting in avoidance of crowded places or public spaces.
+Antonyms:
+1. Sociability
+2. Extroversion
+3. Confidence
+4. Calmness
+5. Composure
+6. Ease
+7. Assurance
+8. Boldness
+9. Fearlessness
+10. Tranquility
 
 ```

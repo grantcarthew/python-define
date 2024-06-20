@@ -9,24 +9,26 @@ import os
 import sys
 
 
-def call_gpt_async(model: str, messages: List[Dict[str, str]], parameters: Dict[str, float]) -> Dict[str, str]:
+def call_gpt_async(model: str, messages: List[Dict[str, str]], parameters: Dict[str, float]) -> None:
     """Call the GPT model asynchronously and return the response."""
 
     try:
         client = OpenAI()
-        stream = client.chat.completions.create(model=model,
+        stream = client.chat.completions.create(
+            model=model,
             messages=messages,
             temperature=parameters['temperature'],
             frequency_penalty=parameters['frequency_penalty'],
             presence_penalty=parameters['presence_penalty'],
-            stream=True)
+            stream=True
+        )
     except Exception as err:
         click.echo(click.style(f'Error: {err}', fg='yellow'), err=True)
         sys.exit(1)
 
     try:
         for chunk in stream:
-            click.secho(chunk.choices[0].delta.content or "", fg='cyan', nl=False)
+            click.secho(chunk.choices[0].delta.content or '', fg='cyan', nl=False)
         print()
     except KeyboardInterrupt:
         print()
@@ -180,8 +182,8 @@ Antonyms:
 
 @click.command()
 @click.version_option(version('python-define'))
-@click.argument('query')
-def cli(query: str) -> None:
+@click.argument('query', nargs=-1)
+def cli(query: List[str]) -> None:
     """An OpenAI-powered command-line linguistics assistant."""
 
     model = 'gpt-4o'
@@ -190,7 +192,8 @@ def cli(query: str) -> None:
         'frequency_penalty': 0,
         'presence_penalty': 0
     }
-    messages = get_messages(query)
+    query_string = ' '.join(query)
+    messages = get_messages(query_string)
 
     call_gpt_async(model, messages, parameters)
     click.echo()
