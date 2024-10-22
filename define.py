@@ -8,12 +8,21 @@ import locale
 import os
 import sys
 
+default_base_url = 'https://api.x.ai/v1'
+default_model_name = 'grok-beta'
+
+DEFINE_API_KEY = os.getenv("DEFINE_API_KEY")
+DEFINE_BASE_URL = os.getenv("DEFINE_BASE_URL", default_base_url)
+DEFINE_MODEL_NAME = os.getenv("DEFINE_MODEL_NAME", default_model_name)
 
 def call_gpt_async(model: str, messages: List[Dict[str, str]], parameters: Dict[str, float]) -> None:
     """Call the GPT model asynchronously and return the response."""
 
     try:
-        client = OpenAI()
+        client = OpenAI(
+            api_key=DEFINE_API_KEY,
+            base_url=DEFINE_BASE_URL
+        )
         stream = client.chat.completions.create(
             model=model,
             messages=messages,
@@ -186,7 +195,7 @@ Antonyms:
 def cli(query: List[str]) -> None:
     """An OpenAI-powered command-line linguistics assistant."""
 
-    model = 'gpt-4o'
+    model = DEFINE_MODEL_NAME
     parameters = {
         'temperature': 0,
         'frequency_penalty': 0,

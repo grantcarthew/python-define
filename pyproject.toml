@@ -1,7 +1,7 @@
 [project]
 name = "python-define"
-version = "2.1.0"
-description = "An OpenAI powered command-line linguistics assistant"
+version = "3.0.0"
+description = "An AI-powered command-line linguistics assistant"
 readme = "README.md"
 requires-python = ">=3.8"
 license = {file = "LICENSE"}
@@ -11,7 +11,7 @@ authors = [
 maintainers = [
   {name = "Grant Carthew", email = "grant@carthew.net"},
 ]
-keywords = ["define", "openai", "llm", "english", "linguistics", "cli"]
+keywords = ["define", "ai", "llm", "x.ai", "xai", "anthropic", "openai", "chatgpt", "gpt", "english", "linguistics", "cli"]
 dependencies = [
   "Click~=8.1.7",
   "openai~=1.25.0",
