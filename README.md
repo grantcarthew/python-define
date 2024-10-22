@@ -1,19 +1,19 @@
 # define
 
-An OpenAI-powered command-line linguistics assistant.
+An AI-powered command-line linguistics assistant.
 
 If you're like me, you often feel unsure about the spelling of words, and sometimes even the definition of a word. Perhaps you're a programmer trying to come up with a name for that variable, function, data, or whatever else.
 
-The 'define' command is a godsend. It's one of the best things to come out of Large Language Models.
+The 'define' command is a godsend. It's one of the best things to come out of the Artificial Intelligence boom.
 
-It uses the OpenAI API to query definitions of words, correct spelling mistakes, and provide synonyms as well as antonyms.
+It uses a Large Language Model API to query definitions of words, correct spelling mistakes, and provide synonyms as well as antonyms.
 
-The 'define' command solely utilizes ChatGPT v4o and will cost you around $2 USD per month for typical use.
+The 'define' command will cost you less than $2 USD per month for typical use.
 
 ## define IS NOT
 
-- A general purpose OpenAI client
-- A free tool to use, you will need an [OpenAI API Key](https://platform.openai.com/account/api-keys)
+- A general purpose AI client
+- A free tool to use, you will need an AI API Key
 - Always perfect in its response
 
 ## Installation
@@ -21,12 +21,32 @@ The 'define' command solely utilizes ChatGPT v4o and will cost you around $2 USD
 First install [pipx](https://pypa.github.io/pipx/)
 
 ```shell
-export OPENAI_API_KEY="<your-openai-api-key>"
-# echo 'export OPENAI_API_KEY="<your-openai-api-key>"' >> "${HOME}/.bashrc"
+export DEFINE_API_KEY="<your-ai-api-key>"
+export DEFINE_BASE_URL="<your-ai-base-url>"     # Defaults to https://api.x.ai/v1
+export DEFINE_MODEL_NAME="<your-ai-model-name>" # Defaults to grok-beta
+
 pipx install python-define
+
+# Test it installed correctly
+define Aussie
 ```
 
 Package Address: https://pypi.org/project/python-define/
+
+## Supported AI Platforms
+
+- X.AI (Recommended):
+  - Console: [console.x.ai](https://console.x.ai/)
+  - Base URL: `https://api.x.ai/v1`
+  - Model Name: `grok-beta`
+- Anthropic:
+  - Console: [console.anthropic.com](https://console.anthropic.com/)
+  - Base URL: `https://api.anthropic.com`
+  - Model Name: `claude-3-5` [reference](https://docs.anthropic.com/en/docs/about-claude/models)
+- OpenAI:
+  - Platform: [platform.openai.com](https://platform.openai.com/)
+  - Base URL: `https://api.openai.com/v1/`
+  - Model Name: `gpt-4o` [reference](https://platform.openai.com/docs/models)
 
 ## Examples
 
