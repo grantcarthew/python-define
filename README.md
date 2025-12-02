@@ -18,20 +18,68 @@ The 'define' command will cost you less than $2 USD per month for typical use.
 
 ## Installation
 
-First install [pipx](https://pypa.github.io/pipx/)
+First, set up your environment variables:
 
 ```shell
 export DEFINE_API_KEY="<your-ai-api-key>"
 export DEFINE_BASE_URL="<your-ai-base-url>"     # Defaults to https://api.x.ai/v1
 export DEFINE_MODEL_NAME="<your-ai-model-name>" # Defaults to grok-beta
+```
 
-pipx install python-define
+Next, install the tool with `uv`:
 
-# Test it installed correctly
+(Requires [uv](https://github.com/astral-sh/uv))
+
+```shell
+uv tool install python-define
+```
+
+After installation, test it:
+
+```shell
 define Aussie
 ```
 
 Package Address: https://pypi.org/project/python-define/
+
+## Development
+
+If you want to contribute to the development of `define`, you can set up a local development environment using `uv`.
+
+1.  **Clone the repository:**
+
+    ```shell
+    git clone https://github.com/grantcarthew/python-define.git
+    cd python-define
+    ```
+
+2.  **Create a virtual environment:**
+
+    ```shell
+    uv venv
+    ```
+
+3.  **Activate the virtual environment:**
+
+    - On macOS/Linux:
+
+      ```shell
+      source .venv/bin/activate
+      ```
+
+    - On Windows:
+
+      ```shell
+      .venv\Scripts\activate
+      ```
+
+4.  **Install the project in editable mode:**
+
+    ```shell
+    uv pip install -e .
+    ```
+
+Now you can run the `define` command directly, and your changes to the source code will be reflected immediately.
 
 ## Supported AI Platforms
 
@@ -270,5 +318,3 @@ Antonyms:
 8. Boldness
 9. Fearlessness
 10. Tranquility
-
-```
